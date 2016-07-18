@@ -1,6 +1,6 @@
 {
-  "name": "bugsnag-js",
-  "version": "2.5.0",
+  "name": "front-bugsnag-js",
+  "version": "2.5.0-1",
   "main": "src/bugsnag.js",
   "scripts": {
     "test": "grunt test"

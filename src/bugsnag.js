@@ -149,7 +149,7 @@
             } catch (e) {
               // We do this rather than stashing treating the error like lastEvent
               // because in FF 26 onerror is not called for synthesized event handlers.
-              if (getSetting("autoNotify", true)) {
+              if (getSetting("autoNotify", false)) {
                 self.notifyException(e, null, null, "error");
                 ignoreNextOnError();
               }
@@ -585,7 +585,7 @@
     }
   }
 
-  if (getSetting("autoNotify", true)) {
+  if (getSetting("autoNotify", false)) {
     //
     // ### Automatic error notification
     //
@@ -600,7 +600,7 @@
       }
 
       return function bugsnag(message, url, lineNo, charNo, exception) {
-        var shouldNotify = getSetting("autoNotify", true);
+        var shouldNotify = getSetting("autoNotify", false);
         var metaData = {};
 
         // IE 6+ support.
